@@ -5,6 +5,11 @@ Alyssa Limit, Nathan Narayana, Thomas Emnetu | INFO201AD | AU22
 
 As we looked into the crime rate in the USA, we wondered why it's absurdly high. Then we ask ourselves, "If people can open their weather app for preventive measures, why isn't there a crime forecast app according to the time for preventive measures?". Thus, our crew creates WAC (Washington Crime), a platform that informs us if it's safe to leave the house at a specific hour, to address the problem.
 
+## Keywords :key:
+| Criminal-Activity  | Violence  |    
+|       :----:       |    :----: | 
+| Community          | Safety    |    
+
 ## Introduction :dart:
 
 During the first few weeks of the quarter, the UW community has been swamped with violence. There has been no sort of general system or data that tackles the issue of reducing victims caused by common crimes. This is important as our basic rights and needs as humans have the right to their safety. As informatics students, we try to accomplish this through our way of using knowledge learned in the class. Our goal is to reduce the number of victims from these criminal acts starting within the state of Washington. We plan to do this by collecting a set of data from the official government website of reported crimes around each county in Washington. These crimes include theft, shootings, vandalism, assault, and many more. We then proceed to analyze and present the data to the public of the general times and areas people should avoid to eliminate the risk of being a victim of those crimes. The summary of the data will be presented on a website.
@@ -40,6 +45,11 @@ The Washingtonian may benefit from this platform because they will receive warni
 
 (1) Our data set will aid us in answering our research questions in a few ways. First, after analyzing the data collected, we will begin to display our findings on a website that contains all relevant information. This answers the question on how the community could help each other on the severity of crime in an area. After looking at our findings, the community could better prepare themselves and others close to them by referring to the website. Secondly, our data set has data for crimes in all of the counties in Washington. From there, we could look up which crime is common in a certain area and how sever it is. This will help the community feel a lot more safe, as they have a sense of how dangerous or safe an area is.
 
+(2) Table representing the data files to be refrenced in this project 
+| Name        | Observations | Variables    |
+| :---        |    :----:   |          ---: |
+| [Criminal Justice Data Book](https://sac.ofm.wa.gov/data)      | 1272       | 228 |
+
 (3) Here is the APA citation for the data:
 
 _Washington State County Criminal Justice Data Book: 1990 to 2020._ Washington State Statistical Analysis Center. Retrieved October 31, 2022, from https://sac.ofm.wa.gov/washington-state-county-criminal-justice-data-book-1990-2020
@@ -48,7 +58,13 @@ The URL can be found through this link https://sac.ofm.wa.gov/washington-state-c
 
 (4) The data is collected by Washington Statistical Analysis Center. WSAC specialize in collecting data surrounding crime and justice. Their data is used for Washington policy and budget development. Bureau of Justice Statistics, Office of Justice Programs, and US Department of Justice funded WSAC through a grant. Since the data from WSAC is being used for creating and revising Washington Policy, those who gained benefit from it can be any institutions that may be related to crime prevention. Furthermore, this data is being used as the reference for budget development, some institutions may receive more or less budget because of this data. Hence, reliable data surveillance must be very strict. The commissioner need to make sure that the data is not being manipulated so people can take advantage from it. WSAC uses Summary Reporting System (SRS) and National Incident Based Reporting System (NIBRS) and they are part of FBI’s Uniform Crime Reporting System. We obtained the data from WSAC website then we downloaded the xlsx format, and we definitely credit the data source.
 
+## Expected Implications :bulb:
 
+* Our findings can have major implications on the quality of livelihood and safety of citizens of Washington. For policymakers, implications would suggest investing more resources into policing counties that have higher rater of criminal activity. Or perhaps a certain area always has high crime at a certain hour, policymakers could look into requiring a lockdown past 1am where if you don't have lawful reason to be outside you'd recieve a citation.
+
+* We collectively expect the our project to concretely display which areas to avoid in Washington and what times to avoid them. An implication that arises for technologists is expanding off of our findings to include the entire Pacific Northwest or conversely, every city in Washington. 
+
+* Another implication surrounding the Designers that encounter our work would be operability. For example, a designer could find our work fascinating, but the ease-of-use isn't fairly easy. A UX Designer would be able to analyze the users needs and understand the most effective way to orient and organize information to make the product viable and inclusive to everyone. 
 
 ## Limitations :jack_o_lantern:
 
