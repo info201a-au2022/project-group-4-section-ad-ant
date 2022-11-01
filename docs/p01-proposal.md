@@ -6,9 +6,9 @@ Alyssa Limit, Nathan Narayana, Thomas Emnetu | INFO201AD | AU22
 As we looked into the crime rate in the USA, we wondered why it's absurdly high. Then we ask ourselves, "If people can open their weather app for preventive measures, why isn't there a crime forecast app according to the time for preventive measures?". Thus, our crew creates WAC (Washington Crime), a platform that informs us if it's safe to leave the house at a specific hour, to address the problem.
 
 ## Keywords :key:
-| Criminal-Activity  | Violence  |    
-|       :----:       |    :----: | 
-| Community          | Safety    |    
+| Criminal-Activity  | Violence  |    Community      |   Safety  |
+|       :----:       |    :----: |      :----:       |    :----: |  
+
 
 ## Introduction :dart:
 
