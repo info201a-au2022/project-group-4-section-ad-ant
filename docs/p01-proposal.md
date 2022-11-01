@@ -48,7 +48,7 @@ The Washingtonian may benefit from this platform because they will receive warni
 3. What are some ways that the UW community can keep each other informed on the severity of the criminal activity in the area?
  * This question is important because it allows us to analyze what the community at hand believes will be beneficial to keep them informed for their safety. What motivates this question is CBPR (community based participatory research) which is the research approach that equitably involves community members in the research process to effectively target the problem at hand.
 
-## The Data Set :chart_with_upwards_trend:
+## The Dataset :chart_with_upwards_trend:
 
 (1) Our data set will aid us in answering our research questions in a few ways. First, after analyzing the data collected, we will begin to display our findings on a website that contains all relevant information. This answers the question on how the community could help each other on the severity of crime in an area. After looking at our findings, the community could better prepare themselves and others close to them by referring to the website. Secondly, our data set has data for crimes in all of the counties in Washington. From there, we could look up which crime is common in a certain area and how sever it is. This will help the community feel a lot more safe, as they have a sense of how dangerous or safe an area is.
 
@@ -97,4 +97,4 @@ _Washington State County Criminal Justice Data Book: 1990 to 2020._ Washington S
 
 ## Appendix A: Questions :question:
 
-Is there any forecast app features that you love and would be great to be included in our project? 
+Is there any forecast app features that you love and would be great to be included in our project?
