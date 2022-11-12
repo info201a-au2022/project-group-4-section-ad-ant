@@ -5,8 +5,8 @@ In our project, we use the following data files and Application Programming Inte
 ## Data files (TODO: Update/delete for your PROJECT)
 |Data File Name | Brief Description|
 |---------------| -----------------|
-|[example.cvs](./example.csv) | This file contains temperature data. (See report for details.)
-|[another-file](./filename2.csv) | Description ... 
+|[Safest-WA-Cities-Sorted.csv](./sorted-WA-cities.csv) | This file contains a safety score for every city in Washington with a population over 10,000. (See report for details.)
+|[test-file](./filename2.csv) | Description ... 
 
 ## Application Programming Interfaces (API) (TODO: Update/delete for your PROJECT)
 
