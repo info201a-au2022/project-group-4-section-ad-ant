@@ -1,7 +1,7 @@
 ---
-title: "WAC (Washington Crime)"
+title: "Washington Crime (WAC)"
 author: "Alyssa Limit, Nathan Narayana, Thomas Emnetu"
-date: "11/12/2022"
+date: "11/13/2022"
 output: html_document
 ---
 
@@ -9,14 +9,36 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## What is this file for?
+Be Safe with WAC by knowing the safety status prediction in Washington Area!
 
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
+## Abstract 
+As we looked into the crime rate in the USA, we wondered why it's absurdly high. Then we ask ourselves, "If people can open their weather app for preventive measures, why isn't there a crime forecast app according to the time for preventive measures?". Thus, our crew creates WAC (Washington Crime), a platform that informs us if it's safe to leave the house at a specific hour, to address the problem.
 
-* Please see Canvas for more details.
+## Keywords 
+- Criminal-Activity 
+- Violence
+- Safety
+- Community
+
+## Introduction:
+
+## Problem Domain:
+
+## Research Questions:
+
+## The Dataset:
+
+## Expected Limitations:
+
+
+**P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
+
+-   Please see Canvas for more details.
 
 ## ACCESSING THE /source DIRECTORY
+
 ### Example 1: Source some code and run a function
+
 ```{r}
 # Example 1: Note relative path, which can be read: Up one
 # directory(..), down into source (/source), and 
@@ -26,14 +48,15 @@ data_access_test()
 ```
 
 ### Example 2: Initialize a variable and then use it
+
 ```{r}
 # Example 1: This function was "sourced" above
 msg <- data_access_test(" Morgan!")
 ```
 
-> `r msg` Hope you have a good day!! 
+> `r msg` Hope you have a good day!!
 
-## ABOUT THIS FILE: 
+## ABOUT THIS FILE:
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
