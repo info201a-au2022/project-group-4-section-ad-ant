@@ -1,7 +1,7 @@
 ---
-title: "Your Project Title"
-author: "project team members"
-date: "1/22/2022"
+title: "WAC (Washington Crime)"
+author: "Alyssa Limit, Nathan Narayana, Thomas Emnetu"
+date: "11/12/2022"
 output: html_document
 ---
 
@@ -47,8 +47,9 @@ summary(cars)
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r pressure, echo=FALSE, fig.height=9.5, fig.width=5}
+plot_wa()
+
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
