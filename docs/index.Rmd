@@ -49,7 +49,7 @@ The Washingtonian may benefit from this platform because they are being informed
  * This question is important because it allows us to analyze what the community at hand believes will be beneficial to keep them informed for their safety. What motivates this question is CBPR (community based participatory research) which is the research approach that equitably involves community members in the research process to effectively target the problem at hand.
 
 ## The Dataset
-(1) Our data set will aid us in answering our research questions in a few ways. First, after analyzing the data collected, we will begin to display our findings on a website that contains all relevant information. This answers the question on how the community could help each other on the severity of crime in an area. After looking at our findings, the community could better prepare themselves and others close to them by referring to the website. Secondly, our data set has data for crimes in all of the counties in Washington. From there, we could look up which crime is common in a certain area and how sever it is. This will help the community feel a lot more safe, as they have a sense of how dangerous or safe an area is.
+(1) Our data set will aid us in answering our research questions in a few ways. First, after analyzing the data collected, we will begin to display our findings on a website that contains all relevant information. This answers the question on how the community could help each other on the severity of crime in an area. After looking at our findings, the community could better prepare themselves and others close to them by referring to the website. Secondly, our data set has data for crimes in all of the counties & cities in Washington. From there, we could look up which crime is common in a certain area, the safety score, and prison rate. This will help the community feel a lot more safe, as they have a sense of how dangerous or safe an area is.
 
 (2) Table representing the data files to be referenced in this project
 | Name        | Observations | Variables    |
@@ -58,9 +58,13 @@ The Washingtonian may benefit from this platform because they are being informed
 
 (3) Here is the APA citation for the data:
 
-_Washington State County Criminal Justice Data Book: 1990 to 2020._ Washington State Statistical Analysis Center. Retrieved October 31, 2022, from https://sac.ofm.wa.gov/washington-state-county-criminal-justice-data-book-1990-2020
+_Safest cities in Washington, 2021._ Background Checks.org. Retrieved November 14, 2022, from https://backgroundchecks.org/safest-cities-in-washington.html 
 
-The URL can be found through this link https://sac.ofm.wa.gov/washington-state-county-criminal-justice-data-book-1990-2020
+The URL can be found through this link https://backgroundchecks.org/safest-cities-in-washington.html 
+
+_National Incident-Based Reporting System (NIBRS)._ Incident Based Reporting System. Retrieved November 14, 2022, from https://sac.ofm.wa.gov/sites/default/files/public/cjdb/nibrs.html 
+
+The URL can be found through this link https://sac.ofm.wa.gov/sites/default/files/public/cjdb/nibrs.html 
 
 (4) The data is collected by Washington Statistical Analysis Center. Washington Statistical Analysis Center or WSAC specializes in collecting data surrounding crime and justice. Their data is used for Washington policy and budget development. Bureau of Justice Statistics, Office of Justice Programs, and US Department of Justice funded WSAC through a grant. Since the data from Washington Statistical Analysis Center is being used for creating and revising Washington Policy, those who gained benefit from it can be any institutions that may be related to crime prevention. Furthermore, this data is being used as the reference for budget development, some institutions may receive more or less budget because of this data. Hence, reliable data surveillance must be very strict. The commissioner need to make sure that the data is not being manipulated so people can take advantage from it. Washington Statistical Analysis Center uses Summary Reporting System (SRS) and National Incident Based Reporting System (NIBRS) and they are part of FBI’s Uniform Crime Reporting System. We obtained the data from Washington Statistical Analysis Center's website then we downloaded the xlsx format, and we definitely credit the data source.
 
@@ -99,14 +103,13 @@ Lopez, G. (2022, September 23). _A shift in crime._ The New York Times. Retrieve
 
 Magaña, D. Z., & Zhou, A. (2022, October 3). _4 injured in University District shooting were UW students._ The Seattle Times. Retrieved October 31, 2022, from https://www.seattletimes.com/seattle-news/law-justice/4-injured-in-university-district-shooting-were-uw-students/
 
-_Washington State County Criminal Justice Data Book: 1990 to 2020._ Washington State Statistical Analysis Center. Retrieved October 31, 2022, from https://sac.ofm.wa.gov/washington-state-county-criminal-justice-data-book-1990-2020
+_National Incident-Based Reporting System (NIBRS)._ Incident Based Reporting System. Retrieved November 14, 2022, from https://sac.ofm.wa.gov/sites/default/files/public/cjdb/nibrs.html 
 
+_Safest cities in Washington, 2021._ Background Checks.org. Retrieved November 14, 2022, from https://backgroundchecks.org/safest-cities-in-washington.html 
 
 ## Appendix A: Questions
 
-Is there any forecast app features that you love and would be great to be included in our project?
-
-
+Is there more features that you love and would be great to be included in our project?
 
 
 ## Chart #1 -Thomas 
