@@ -12,12 +12,12 @@ source("../source/chart1.R")
 
 Be Safe with WAC by knowing the safety status in Washington Area!
 
-## Abstract 
+## Abstract
 As we looked into the crime rate in the USA, we wondered why it's absurdly high. Then we ask ourselves, "If people can open their weather app to understand the weather status in an area, why isn't there a crime app informing the safety status of an area we're in?". Thus, our crew creates WAC (Washington Crime), an integrated platform that tells us the area safety status in based on safety score, prison rate, and common type of crime in an area to address the problem.
 
-## Keywords 
+## Keywords
    Positive       Negative    
--------------- ------------- 
+-------------- -------------
 Community         Violence
 Safety            Criminal-Activity
 
@@ -71,13 +71,13 @@ The Washingtonian may benefit from this platform because they are being informed
 
 (3) Here is the APA citation for the data:
 
-_Safest cities in Washington, 2021._ Background Checks.org. Retrieved November 14, 2022, from https://backgroundchecks.org/safest-cities-in-washington.html 
+_Safest cities in Washington, 2021._ Background Checks.org. Retrieved November 14, 2022, from https://backgroundchecks.org/safest-cities-in-washington.html
 
-The URL can be found through this link https://backgroundchecks.org/safest-cities-in-washington.html 
+The URL can be found through this link https://backgroundchecks.org/safest-cities-in-washington.html
 
-_National Incident-Based Reporting System (NIBRS)._ Incident Based Reporting System. Retrieved November 14, 2022, from https://sac.ofm.wa.gov/sites/default/files/public/cjdb/nibrs.html 
+_National Incident-Based Reporting System (NIBRS)._ Incident Based Reporting System. Retrieved November 14, 2022, from https://sac.ofm.wa.gov/sites/default/files/public/cjdb/nibrs.html
 
-The URL can be found through this link https://sac.ofm.wa.gov/sites/default/files/public/cjdb/nibrs.html 
+The URL can be found through this link https://sac.ofm.wa.gov/sites/default/files/public/cjdb/nibrs.html
 
 (4) The data is collected by Washington Statistical Analysis Center. Washington Statistical Analysis Center or WSAC specializes in collecting data surrounding crime and justice. Their data is used for Washington policy and budget development. Bureau of Justice Statistics, Office of Justice Programs, and US Department of Justice funded WSAC through a grant. Since the data from Washington Statistical Analysis Center is being used for creating and revising Washington Policy, those who gained benefit from it can be any institutions that may be related to crime prevention. Furthermore, this data is being used as the reference for budget development, some institutions may receive more or less budget because of this data. Hence, reliable data surveillance must be very strict. The commissioner need to make sure that the data is not being manipulated so people can take advantage from it. Washington Statistical Analysis Center uses Summary Reporting System (SRS) and National Incident Based Reporting System (NIBRS) and they are part of FBI’s Uniform Crime Reporting System. We obtained the data from Washington Statistical Analysis Center's website then we downloaded the xlsx format, and we definitely credit the data source.
 
@@ -90,7 +90,7 @@ The URL can be found through this link https://sac.ofm.wa.gov/sites/default/file
 * Another implication surrounding the Designers that encounter our work would be operability. For example, a designer could find our work fascinating, but the ease-of-use isn't fairly easy. A UX Designer would be able to analyze the users needs and understand the most effective way to orient and organize information to make the product viable and inclusive to everyone.
 
 
-## Limitations 
+## Limitations
 
 * Although our dataset may have the times and locations of when each crime is commonly committed, we cannot guarantee the exact percentage of risk a certain time or location has.
 
@@ -100,7 +100,7 @@ The URL can be found through this link https://sac.ofm.wa.gov/sites/default/file
 
 ## Findings
 
-## Discussion 
+## Discussion
 
 ## Conclusion
 
@@ -116,16 +116,16 @@ Lopez, G. (2022, September 23). _A shift in crime._ The New York Times. Retrieve
 
 Magaña, D. Z., & Zhou, A. (2022, October 3). _4 injured in University District shooting were UW students._ The Seattle Times. Retrieved October 31, 2022, from https://www.seattletimes.com/seattle-news/law-justice/4-injured-in-university-district-shooting-were-uw-students/
 
-_National Incident-Based Reporting System (NIBRS)._ Incident Based Reporting System. Retrieved November 14, 2022, from https://sac.ofm.wa.gov/sites/default/files/public/cjdb/nibrs.html 
+_National Incident-Based Reporting System (NIBRS)._ Incident Based Reporting System. Retrieved November 14, 2022, from https://sac.ofm.wa.gov/sites/default/files/public/cjdb/nibrs.html
 
-_Safest cities in Washington, 2021._ Background Checks.org. Retrieved November 14, 2022, from https://backgroundchecks.org/safest-cities-in-washington.html 
+_Safest cities in Washington, 2021._ Background Checks.org. Retrieved November 14, 2022, from https://backgroundchecks.org/safest-cities-in-washington.html
 
 ## Appendix A: Questions
 
 Is there more features that you love and would be great to be included in our project?
 
 
-## Chart #1 -Thomas 
+## Chart #1 -Thomas
 
 ```{r pressure, echo=FALSE, fig.height=9.5, fig.width=5}
 plot_wa()
@@ -134,10 +134,10 @@ plot_wa()
 
 ## Table
 
-To construct state rankings, we used the 2019 FBI crime statistics for Washington State. The data collection initially had 7,430 cities. 2,929 cities were left after eliminating those with populations under 10,000. After dividing the total number of crimes by the population to obtain rates per 1,000, we next estimated the rates of violent and property crime. We also determined the number of law enforcement officers per 1,000 people. These were weighted by adding 50% to the rate of violent crime, -25% to the rate of property crime, and 25% to the rate of law enforcement. We received a safety index score from the resulting measure. The safer the city is, the higher this value. 
+To construct state rankings, we used the 2019 FBI crime statistics for Washington State. The data collection initially had 7,430 cities. 2,929 cities were left after eliminating those with populations under 10,000. After dividing the total number of crimes by the population to obtain rates per 1,000, we next estimated the rates of violent and property crime. We also determined the number of law enforcement officers per 1,000 people. These were weighted by adding 50% to the rate of violent crime, -25% to the rate of property crime, and 25% to the rate of law enforcement. We received a safety index score from the resulting measure. The safer the city is, the higher this value.
 
     State       SafetyScore    
--------------- ------------- 
+-------------- -------------
 Snoqualmie	      0.60
 Enumclaw	         0.50
 West Richland	     0.40
@@ -232,7 +232,7 @@ Tacoma	           -1.44
 
 ```{r}
 # Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
+# directory(..), down into source (/source), and
 # then "source" an R file (data_access.R)
 source("../source/chart1.R")
 data_access_test()
