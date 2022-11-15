@@ -47,8 +47,9 @@ earliest_record <- county_crime_filtered[1, 2]
 latest_record <- county_crime_filtered[8, 2]
 
 number_of_counties <- county_crime_filtered %>%
+  filter(INDEXYEAR == 2020) %>%
   summarize(COUNTY) %>%
-  length(unique(COUNTY))
+  nrow()
 
 lowest_prison_rate <- county_crime_filtered %>%
   filter(PRISON.RATE == 0) %>%
