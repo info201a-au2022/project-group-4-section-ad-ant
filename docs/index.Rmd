@@ -6,9 +6,10 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-library(knitr)
-knitr::opts_chunk$set(echo = TRUE)
+#knitr::opts_chunk$set(echo = TRUE)
+opts_knit$set(root.dir = '/Users/username/path_to_project')
 source("../source/chart1.R")
+
 ```
 
 Be Safe with WAC by knowing the safety status in Washington Area!
@@ -140,11 +141,15 @@ plot_wa()
 ```{r}
 plot_v1()
 ```
+Taking data from member law enforcement agencies each month, the Washington Association of Sheriffs and Police Chiefs (WASPC) compiles statistics on reported incidents-based offenses. The agencies take part voluntarily in the Federal Bureau of Investigation's initiative for uniform crime reporting. This data displayed a prison rate that calculated the number of personal offenses reported per 1,000 residents. Since there are 39 counties in Washington, our team divided the prison rate according to the counties. It’s very important to know the prison rate in a county so you know how severe the situation is there. We can see the top 3 stagnant prison rate in Washington is Benton, Clark, and Pierce. On the other hand, Garfield, Columbia, and Spokane have the most significant change in prison rates. As most UW student resides in King County, the prison rate in King county is somewhere between 12-15.
+
 
 ## Chart #3 
 ```{r}
 plot_1()
 ```
+The chart uses data from the FBI: UCR website which was titled “Offenses Known to Law Enforcement” for Washington for the year 2019. The data displayed the counties along with the type of reported crimes ranging from violent crimes to arson. The number displayed on the x-axis represents the total crimes committed in a county, with the y-axis being the county. We can see that the Ferry County has the lowest criminal activity and the Pierce County having the highest criminal activity. The importance of this chart is to visualize how safe a county is in comparison to the other counties. This promotes awareness to the local community and help them understand the safety of different areas in their vicinity
+
 
 ## Table
 
@@ -235,31 +240,7 @@ Fife		        -1.31
 Spokane		        -1.37
 Tacoma	           -1.44
 
-## Chart 3
-
-## BarChart
-
-
-**P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
-
--   Please see Canvas for more details.
-
-## ACCESSING THE /source DIRECTORY
-
-### Example 1: Source some code and run a function
-
-```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
-# then "source" an R file (data_access.R)
-source("../source/chart1.R")
-```
-
-
-### Example 2: Initialize a variable and then use it
-
 
 
 Our research shows that `r safest_city`
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
