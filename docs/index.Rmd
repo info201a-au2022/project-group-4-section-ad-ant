@@ -143,6 +143,50 @@ plot_v1()
 ```
 Taking data from member law enforcement agencies each month, the Washington Association of Sheriffs and Police Chiefs (WASPC) compiles statistics on reported incidents-based offenses. The agencies take part voluntarily in the Federal Bureau of Investigation's initiative for uniform crime reporting. This data displayed a prison rate that calculated the number of personal offenses reported per 1,000 residents. Since there are 39 counties in Washington, our team divided the prison rate according to the counties. It’s very important to know the prison rate in a county so you know how severe the situation is there. We can see the top 3 stagnant prison rate in Washington is Benton, Clark, and Pierce. On the other hand, Garfield, Columbia, and Spokane have the most significant change in prison rates. As most UW student resides in King County, the prison rate in King county is somewhere between 12-15.
 
+```{r}
+county_crime_filtered <- county_crime %>%
+  filter(LOCATION == "COUNTY TOTAL") %>%
+  group_by(COUNTY) %>%
+  summarize(COUNTY,
+            INDEXYEAR,
+            PRISON.TOTAL,
+            PRISON.RATE,
+  )
+```
+
+```{r}
+earliest_record <- county_crime_filtered[1, 2]
+```
+
+```{r}
+latest_record <- county_crime_filtered[8, 2]
+```
+
+```{r}
+number_of_counties <- county_crime_filtered %>%
+  filter(INDEXYEAR == 2020) %>%
+  summarize(COUNTY) %>%
+  nrow()
+```
+
+```{r}
+number_of_counties <- county_crime_filtered %>%
+  filter(INDEXYEAR == 2020) %>%
+  summarize(COUNTY) %>%
+  nrow()
+```
+
+```{r}
+lowest_prison_rate <- county_crime_filtered %>%
+  filter(PRISON.RATE == 0) %>%
+  pull(COUNTY)
+```
+
+```{r}
+highest_prison_rate <- county_crime_filtered %>%
+  filter(PRISON.RATE > 35) %>%
+  pull(COUNTY)
+```
 
 ## Chart #3 
 ```{r}
