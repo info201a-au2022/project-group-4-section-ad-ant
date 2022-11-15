@@ -64,15 +64,11 @@ The Washingtonian may benefit from this platform because they are being informed
 (1) Our data set will aid us in answering our research questions in a few ways. First, after analyzing the data collected, we will begin to display our findings on a website that contains all relevant information. This answers the question on how the community could help each other on the severity of crime in an area. After looking at our findings, the community could better prepare themselves and others close to them by referring to the website. Secondly, our data set has data for crimes in all of the counties & cities in Washington. From there, we could look up which crime is common in a certain area, the safety score, and prison rate. This will help the community feel a lot more safe, as they have a sense of how dangerous or safe an area is.
 
 (2) Table representing the data files to be referenced in this project
-   Name       Observations  Variables  
-------------- ------------ ------------
-[Criminal Justice Data Book](https://sac.ofm.wa.gov/data)        Violence
-Safety            Criminal-Activity
+   Name               Observations      Variables  
+-------------        ---------------   ------------
+[Criminal Justice Data Book]  1272         228
+[FBI: UCR]                37                12
 
-| Name        | Observations | Variables    |
-| :---        |    :----:   |          ---: |
-| [Criminal Justice Data Book](https://sac.ofm.wa.gov/data)      | 1272       | 228 |
-| [FBI: UCR](https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/table-10/table-10-state-cuts/washington.xls) | 37 | 12
 
 (3) Here is the APA citation for the data:
 
