@@ -103,12 +103,6 @@ The URL can be found through this link https://sac.ofm.wa.gov/sites/default/file
 
 * There is insufficient data from the years of 2021-2022. In order to fully analyze the crimes that happened in Washington State, it requires us to also analyze the reported crimes that happened recently. This allows space for errors and inaccuracy.
 
-## Findings
-
-## Discussion 
-
-## Conclusion
-
 ## Acknowledgements
 
 We want to express our gratitude to INFO 201 Instructors: Thomas Winegarden and Yubing Tian for guiding us through this Group Project and giving us great feedback.
@@ -187,6 +181,11 @@ highest_prison_rate <- county_crime_filtered %>%
   filter(PRISON.RATE > 35) %>%
   pull(COUNTY)
 ```
+
+Taking data from member law enforcement agencies each month, the Washington Association of Sheriffs and Police Chiefs (WASPC) compiles statistics on reported incidents-based offenses. The agencies take part voluntarily in the Federal Bureau of Investigation's initiative for uniform crime reporting. This data displayed a prison rate that calculated the number of personal offenses reported per 1,000 residents. Since there are 39 counties in Washington, our team divided the prison rate according to the counties. It’s very important to know the prison rate in a county so you know how severe the situation is there. We can see the top 3 stagnant prison rate in Washington is Benton, Clark, and Pierce. On the other hand, Garfield, Columbia, and Spokane have the most significant change in prison rates. As most UW student resides in King County, the prison rate in King county is somewhere between 12-15.
+
+These charts represent the prison rate data from `r earliest_record` to `r latest_record` that’s compiled by WSAC (Washington Statistical Analysis Center). It measures the prison rate from `r number_of_counties` counties in Washington. The lowest prison rate is zero which is in `r lowest_prison_rate` and the highest prison rate is 36.3 in `r highest_prison_rate`. Meanwhile, the barchart could get the highest total crime and lowest total crime, which is `r highest_crime` and `r lowest_crime` respectively. From the data we are able to conclude that Snoqualmie is the safest city for citizens with a safety rating of `r safest_city`.
+
 
 ## Chart #3 
 ```{r}
