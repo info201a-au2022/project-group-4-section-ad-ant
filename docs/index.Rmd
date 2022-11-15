@@ -8,7 +8,6 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 source("../source/chart1.R")
-source("../source/chart3.R")
 ```
 
 Be Safe with WAC by knowing the safety status in Washington Area!
@@ -68,7 +67,7 @@ The Washingtonian may benefit from this platform because they are being informed
 (2) Table representing the data files to be referenced in this project
    Name       Observations  Variables  
 ------------- ------------ ------------
-Community         Violence
+[Criminal Justice Data Book](https://sac.ofm.wa.gov/data)        Violence
 Safety            Criminal-Activity
 
 | Name        | Observations | Variables    |
@@ -230,53 +229,8 @@ Tacoma	           -1.44
 
 ## Chart 3
 
-## Table
-
-To find the total crimes, we summed all the different types of crimes based on each county from the big data set for the year 2019. The table shows the county with the least number of crimes to the most number of crimes.
-
-    County       Total Crimes    
--------------- -------------
-Ferry               58
-Wahkiakum           72
-Whitman             84
-Klickitat           160
-Columbia            163
-Lincoln           199
-Adams               224
-San Juan            228
-Asotin                282
-Franklin            287
-Skamania            290
-Pend Oreille        290
-Kittitas            300
-Pacific           317
-Okanogan            394
-Douglas           481
-Jefferson       511
-Walla Walla       574
-Grays Harbor        596
-Cowlitz           703
-Chelan          730   
-Stevens           748
-Island            860
-Benton            923
-Clallam           1021
-Lewis           1119
-Skagit            1663
-Grant           1880
-Mason           2084
-Yakima          3245
-Thurston          3595
-Clark           4848
-Spokane           5733
-Kitsap            6966
-King            8533
-Snohomish       9756
-Pierce          15996
-
 ## BarChart
-```{r pressure, echo=FALSE, fig.height=9.5, fig.width=5}
-plot1()
+```{r}
 ```
 
 **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
