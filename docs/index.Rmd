@@ -16,9 +16,13 @@ Be Safe with WAC by knowing the safety status in Washington Area!
 As we looked into the crime rate in the USA, we wondered why it's absurdly high. Then we ask ourselves, "If people can open their weather app to understand the weather status in an area, why isn't there a crime app informing the safety status of an area we're in?". Thus, our crew creates WAC (Washington Crime), an integrated platform that tells us the area safety status in based on safety score, prison rate, and common type of crime in an area to address the problem.
 
 ## Keywords 
+   Positive       Negative    
+-------------- ------------- 
+Community         Violence
+Safety            Criminal-Activity
+
 | Criminal-Activity  | Violence  |    Community      |   Safety  |
 |       :----:       |    :----: |      :----:       |    :----: |  
-
 
 ## Introduction
 During the first few weeks of the quarter, the UW community has been swamped with violence. There has been no sort of general system or data that tackles the issue of reducing victims caused by common crimes. This is important as our basic rights and needs as humans have the right to their safety. As informatics students, we try to accomplish this through our way of using knowledge learned in the class. Our goal is to reduce the number of victims from these criminal acts starting within the state of Washington. We plan to do this by collecting a set of data from the official government website of reported crimes around each county in Washington. These crimes include theft, shootings, vandalism, assault, and many more. We then proceed to analyze and present the data to the public of the safety score of area they are in, prison rate, and common type of crime so they can make informed decision in avoiding certain areas with low safety score. The summary of the data will be presented on a website.
@@ -41,12 +45,21 @@ The Washingtonian may benefit from this platform because they are being informed
 
 
 ## Research Questions
-1.  How do UW students feel about the recent uprise in criminal activity around campus?
-* This question is important to understand the sentiment surrounding the basis of our project. What motivates this question is the fact that if students feel safe and have no concerns about the criminal activity, our project ceases to have any relevancy or impact.
-2. This question is important because the suggestions that the UW community poses are a direct reflection of things that would increase their feeling of safety.
-* What motivates this question is rather than guess and check what would make the community feel safer, we can ask the community and expand off of their insights.
-3. What are some ways that the UW community can keep each other informed on the severity of the criminal activity in the area?
-* This question is important because it allows us to analyze what the community at hand believes will be beneficial to keep them informed for their safety. What motivates this question is CBPR (community based participatory research) which is the research approach that equitably involves community members in the research process to effectively target the problem at hand.
+1.  **Are UW students more susceptible to violent crimes than Washington State residents?**
+
+    - This question is important to understand the sentiment surrounding the basis of our project. What motivates this question is the fact that if students feel safe and have no concerns about the violent criminal activity, our project ceases to have any relevancy or impact.
+
+2.  **What would make the UW community feel more safe as criminal activity continues to rise?**
+
+    - This question is important because the suggestions that the UW community poses are a direct reflection of things that would increase their feeling of safety. What motivates this question is rather than guess and check what would make the community feel safer, we can ask the community and expand off of their insights.
+
+3. **What are some ways that the UW community can keep each other informed on the severity of the criminal activity in the area?**
+
+    - This question is important because it allows us to analyze what the community at hand believes will be beneficial to keep them informed for their safety. What motivates this question is CBPR (community based participatory research) which is the research approach that equitably involves community members in the research process to effectively target the problem at hand.
+
+4. **In what ways does our data hold power?**
+
+    - This questions is important because we will actively be in communication with marginalized groups and stakeholders. Being cognisent of the power we hold, working with this data, is essential so that we can better cater towards those who will be affected by the data. Not solely the ones who consume it.
 
 ## The Dataset
 (1) Our data set will aid us in answering our research questions in a few ways. First, after analyzing the data collected, we will begin to display our findings on a website that contains all relevant information. This answers the question on how the community could help each other on the severity of crime in an area. After looking at our findings, the community could better prepare themselves and others close to them by referring to the website. Secondly, our data set has data for crimes in all of the counties & cities in Washington. From there, we could look up which crime is common in a certain area, the safety score, and prison rate. This will help the community feel a lot more safe, as they have a sense of how dangerous or safe an area is.
@@ -119,6 +132,95 @@ plot_wa()
 
 ```
 
+## Table
+
+To construct state rankings, we used the 2019 FBI crime statistics for Washington State. The data collection initially had 7,430 cities. 2,929 cities were left after eliminating those with populations under 10,000. After dividing the total number of crimes by the population to obtain rates per 1,000, we next estimated the rates of violent and property crime. We also determined the number of law enforcement officers per 1,000 people. These were weighted by adding 50% to the rate of violent crime, -25% to the rate of property crime, and 25% to the rate of law enforcement. We received a safety index score from the resulting measure. The safer the city is, the higher this value. 
+
+    State       SafetyScore    
+-------------- ------------- 
+Snoqualmie	      0.60
+Enumclaw	         0.50
+West Richland	     0.40
+Sunnyside	        0.40
+Oak Harbor	     0.40
+Maple Valley	   0.30
+Lynden	          0.30
+Sammamish	         0.30
+Mercer Island	        0.30
+Grandview	          0.30
+Lake Forest Park    	 0.30
+Kenmore	            0.30
+Camas	            0.30
+Bainbridge Island	    0.30
+Pullman	           0.30
+Newcastle	         0.20
+Woodinville	       0.20
+Shoreline	         0.20
+Anacortes	         0.20
+Mukilteo         	0.20
+Bothell	          0.20
+Kirkland          	0.20
+Issaquah       	0.10
+Ferndale       	0.10
+Battle Ground	     0.10
+Lake Stevens     	0.10
+Washougal	       0.10
+Cheney	         0.10
+East Wenatchee	  0.10
+Ellensburg	     0.10
+Poulsbo	        0.10
+Redmond	        0
+Bellevue	       0
+Edmonds	         0
+SeaTac	         0
+Covington	       0
+Burien	          0
+Bonney Lake	     0
+Mill Creek	     0
+Sedro Woolley   	0
+Mountlake Terrace	    0
+Richland	         0
+Auburn	          0
+Monroe	          -0.06
+Pasco	            -0.07
+Wenatchee	        -0.08
+Snohomish		        -0.08
+Edgewood		        -0.11
+Marysville	        	-0.14
+Kennewick	        	-0.21
+Mount Vernon	        	-0.27
+Longview	        	-0.28
+Tumwater		        -0.29
+Walla Walla	        	-0.32
+Lacey		        -0.34
+Kelso	        	-0.37
+University Place      	-0.39
+Bellingham	        	-0.4
+Aberdeen	        	-0.42
+Vancouver		        -0.43
+Spokane Valley	   	-0.44
+Port Angeles   	-0.46
+Sumner		        -0.49
+Arlington		        -0.5
+Lynnwood		        -0.56
+Des Moines		        -0.57
+Everett		        -0.61
+Renton		        -0.65
+Port Orchard		        -0.65
+Olympia		        -0.67
+Puyallup	        	-0.68
+Kent	        	-0.74
+Bremerton	        	-0.77
+Seattle		        -0.82
+Centralia		        -0.86
+Federal Way		        -0.89
+Moses Lake		        -0.92
+Yakima		        -0.92
+Lakewood	        	-1.06
+Fife		        -1.31
+Spokane		        -1.37
+Tacoma	           -1.44
+
 
 **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
 
@@ -140,11 +242,11 @@ data_access_test()
 ### Example 2: Initialize a variable and then use it
 
 ```{r}
-# Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
+source("../source/chart1.R")
+
 ```
 
-> `r msg` Hope you have a good day!!
 
+Our research shows that `r safest_city`
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

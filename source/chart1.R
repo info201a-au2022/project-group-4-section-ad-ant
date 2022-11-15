@@ -23,3 +23,4 @@ plot_wa <- function (df = wa_cities) {
     ggtitle("Safest Cities in Washington") 
 }
 
+safest_city <- wa_cities[2,2]
