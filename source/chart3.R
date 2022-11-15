@@ -9,6 +9,14 @@ filtered <- data %>%
   arrange(TOTAL_CRIMES) %>%
   summarize(County, TOTAL_CRIMES)
 
+highest_crime <- filtered %>%
+  filter(TOTAL_CRIMES == max(TOTAL_CRIMES)) %>%
+  pull(County)
+
+lowest_crime <- filtered %>%
+  filter(TOTAL_CRIMES == min(TOTAL_CRIMES)) %>%
+  pull(County)
+
 # PLOT
 plot1 <- function (df = filtered) {
   ggplot(filtered, aes(x = TOTAL_CRIMES, y = reorder(County, -TOTAL_CRIMES))) +
@@ -19,4 +27,6 @@ plot1 <- function (df = filtered) {
          y = "County",
          title = "Total Crimes in Each County in Washington State for the Year 2019")
 }
-plot1
+plot1()
+
+
