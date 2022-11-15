@@ -6,6 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
+library(knitr)
 knitr::opts_chunk$set(echo = TRUE)
 source("../source/chart1.R")
 ```
@@ -20,9 +21,6 @@ As we looked into the crime rate in the USA, we wondered why it's absurdly high.
 -------------- ------------- 
 Community         Violence
 Safety            Criminal-Activity
-
-| Criminal-Activity  | Violence  |    Community      |   Safety  |
-|       :----:       |    :----: |      :----:       |    :----: |  
 
 ## Introduction
 During the first few weeks of the quarter, the UW community has been swamped with violence. There has been no sort of general system or data that tackles the issue of reducing victims caused by common crimes. This is important as our basic rights and needs as humans have the right to their safety. As informatics students, we try to accomplish this through our way of using knowledge learned in the class. Our goal is to reduce the number of victims from these criminal acts starting within the state of Washington. We plan to do this by collecting a set of data from the official government website of reported crimes around each county in Washington. These crimes include theft, shootings, vandalism, assault, and many more. We then proceed to analyze and present the data to the public of the safety score of area they are in, prison rate, and common type of crime so they can make informed decision in avoiding certain areas with low safety score. The summary of the data will be presented on a website.
@@ -131,11 +129,21 @@ _Safest cities in Washington, 2021._ Background Checks.org. Retrieved November 1
 Is there more features that you love and would be great to be included in our project?
 
 
-## Chart #1 -Thomas 
+## Chart #1 
 
 ```{r pressure, echo=FALSE, fig.height=9.5, fig.width=5}
 plot_wa()
 
+```
+
+## Chart #2 
+```{r}
+plot_v1()
+```
+
+## Chart #3 
+```{r}
+plot_1()
 ```
 
 ## Table
@@ -230,8 +238,7 @@ Tacoma	           -1.44
 ## Chart 3
 
 ## BarChart
-```{r}
-```
+
 
 **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
 
@@ -246,16 +253,11 @@ Tacoma	           -1.44
 # directory(..), down into source (/source), and 
 # then "source" an R file (data_access.R)
 source("../source/chart1.R")
-data_access_test()
 ```
 
 
 ### Example 2: Initialize a variable and then use it
 
-```{r}
-source("../source/chart1.R")
-
-```
 
 
 Our research shows that `r safest_city`
