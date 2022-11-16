@@ -9,27 +9,6 @@ library(ggplot2)
 county_crime <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-ad-ant/main/data/NIBRS1220.csv")
 View(county_crime)
 
-# LIBRARY
-library(ggplot2)
-library(dplyr)
-
-# plot
-plot_v1 <- function (df=county_crime_filtered) {ggplot(county_crime_filtered, 
-                                                       aes(x = INDEXYEAR, 
-                                                           y = PRISON.RATE, 
-                                                           fill = COUNTY)) +
-    geom_area() + 
-    facet_wrap(~COUNTY) +
-    labs(
-      x = "Year",
-      y = "Prison Rate",
-      title = "Prison Rate in Washington Counties from 2012-2020",
-    )
-}
-
-
-plot_v1()
-
 # DATA WRANGLING
 
 county_crime_filtered <- county_crime %>%
@@ -60,4 +39,24 @@ highest_prison_rate <- county_crime_filtered %>%
   pull(COUNTY)
 
 
+# LIBRARY
+library(ggplot2)
+library(dplyr)
+
+# plot
+plot_v1 <- function (df=county_crime_filtered) {ggplot(county_crime_filtered, 
+                                                       aes(x = INDEXYEAR, 
+                                                           y = PRISON.RATE, 
+                                                           fill = COUNTY)) +
+    geom_area() + 
+    facet_wrap(~COUNTY) +
+    labs(
+      x = "Year",
+      y = "Prison Rate",
+      title = "Prison Rate in Washington Counties from 2012-2020",
+    )
+}
+
+
+plot_v1()
 

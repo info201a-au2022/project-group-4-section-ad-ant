@@ -6,10 +6,10 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-#knitr::opts_chunk$set(echo = TRUE)
-opts_knit$set(root.dir = '/Users/username/path_to_project')
+knitr::opts_chunk$set(echo = TRUE)
 source("../source/chart1.R")
-
+source("../source/chart2.R")
+source("../source/chart3.R")
 ```
 
 Be Safe with WAC by knowing the safety status in Washington Area!
@@ -186,7 +186,7 @@ Taking data from member law enforcement agencies each month, the Washington Asso
 
 ## Chart #3
 ```{r}
-plot_1()
+plot1()
 ```
 The chart uses data from the FBI: UCR website which was titled “Offenses Known to Law Enforcement” for Washington for the year 2019. The data displayed the counties along with the type of reported crimes ranging from violent crimes to arson. The number displayed on the x-axis represents the total crimes committed in a county, with the y-axis being the county. We can see that the Ferry County has the lowest criminal activity and the Pierce County having the highest criminal activity. The importance of this chart is to visualize how safe a county is in comparison to the other counties. This promotes awareness to the local community and help them understand the safety of different areas in their vicinity
 
@@ -280,5 +280,5 @@ Fife		        -1.31
 Spokane		        -1.37
 Tacoma	           -1.44
 
-# Dynamic Paragraph
-These charts represent the prison rate data from `r earliest_record` to `r latest_record` that’s compiled by WSAC (Washington Statistical Analysis Center). It measures the prison rate from `r number_of_counties` counties in Washington. The lowest prison rate is zero which is in `r lowest_prison_rate` and the highest prison rate is 36.3 in `r highest_prison_rate`. Meanwhile, the barc hart could get the highest total crime and lowest total crime, which is `r highest_crime` and `r lowest_crime` respectively. From the data we are able to conclude that Snoqualmie is the safest city for citizens with a safety rating of `r safest_city`.
+## Dynamic Paragraph
+The second chart represent the prison rate data from `r earliest_record` to `r latest_record` that’s compiled by WSAC (Washington Statistical Analysis Center). It measures the prison rate from `r number_of_counties` counties in Washington. The lowest prison rate is zero which is in `r lowest_prison_rate` and the highest prison rate is 36.3 in `r highest_prison_rate`. Meanwhile, the barc hart could get the highest total crime and lowest total crime, which is `r highest_crime` and `r lowest_crime` respectively. From the data we are able to conclude that Snoqualmie is the safest city for citizens with a safety rating of `r safest_city`.

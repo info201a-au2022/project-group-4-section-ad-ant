@@ -3,7 +3,7 @@ library("tidyverse")
 library("dplyr")
 
 
-data <- read.csv("county-crime-WA.csv")
+data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-ad-ant/main/data/county-crime-WA.csv")
 
 filtered <- data %>%
   arrange(TOTAL_CRIMES) %>%
