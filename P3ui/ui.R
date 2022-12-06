@@ -12,19 +12,24 @@
 library(shiny)
 
 # Define UI for application that draws a histogram
-shinyUI(fluidPage(
 
-    # Application title
-    titlePanel("WAC: Washington Crime!"),
+intro_page <- tabPanel("Introduction",
+                       titlePanel("WAC: Washington Crime!"))
 
-    # Sidebar with a slider input for number of bins
-    sidebarLayout(
-        sidebarPanel(
-            
-        ),
+plot1 <- tabPanel("Plot 1",
+                  titlePanel("Plot1"),
+                  plotOutput("plot1"))
 
-        # Show a plot of the generated distribution
-        mainPanel(
-        )
-    )
-))
+plot2 <- tabPanel("Plot 2",
+                  titlePanel("Plot2"))
+
+plot3 <- tabPanel("Plot 3",
+                  titlePanel("Plot 3"))
+
+ui <- navbarPage(
+  "Washington Crime!",
+  intro_page,
+  plot1,
+  plot2,
+  plot3
+)
