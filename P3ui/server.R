@@ -10,7 +10,9 @@
 library(shiny)
 library(tidyverse)
 library(ggplot2)
+library(plotly)
 
+wa_cities <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-ad-ant/main/data/sorted-WA-cities.csv")
 county_crime <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-ad-ant/main/data/NIBRS1220.csv")
 
 county_crime_filtered <- county_crime %>%
@@ -65,6 +67,10 @@ shinyServer(function(input, output) {
              y = "County",
              title = "Total Crimes in Each County in Washington State for the Year 2019")
   })
+  output$plot3 <- renderPlotly({
+    plot_ly(data=wa_cities, x= ~safetyScore, y= ~state, type = 'scatter', 
+            color = ~safetyScore, size = ~safetyScore)
+  })
 
-    })
+})
 

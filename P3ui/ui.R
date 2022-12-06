@@ -10,6 +10,7 @@
 #https://alyssa2828.shinyapps.io/P3ui/
 
 library(shiny)
+library(plotly)
 
 # Define UI for application that draws a histogram
 
@@ -23,11 +24,12 @@ plot1 <- tabPanel("Plot 1",
                   plotOutput("plot1"))
 
 plot2 <- tabPanel("Plot 2",
-                  titlePanel("Plot2"))
+                  titlePanel("Plot2"), 
+                  plotOutput("plot2"))
 
 plot3 <- tabPanel("Plot 3",
                   titlePanel("Plot 3"),
-                  plotOutput("plot2"))
+                  plotlyOutput("plot3"))
       
 summ <- tabPanel("Summary",
                  titlePanel("Summary"))
