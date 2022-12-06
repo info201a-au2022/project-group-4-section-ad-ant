@@ -14,7 +14,9 @@ library(shiny)
 # Define UI for application that draws a histogram
 
 intro_page <- tabPanel("Introduction",
-                       titlePanel("WAC: Washington Crime!"))
+                       titlePanel("WAC: Washington Crime!"),
+                       p("Be Safe with WAC by knowing the safety status in Washington Area!"),
+                       h1("Introduction"))
 
 plot1 <- tabPanel("Plot 1",
                   titlePanel("Plot1"),
@@ -27,10 +29,17 @@ plot3 <- tabPanel("Plot 3",
                   titlePanel("Plot 3"),
                   plotOutput("plot2"))
       
+summ <- tabPanel("Summary",
+                 titlePanel("Summary"))
+
+report <- tabPanel("Report",
+                   titlePanel("Report"))
 ui <- navbarPage(
   "Washington Crime!",
   intro_page,
   plot1,
   plot2,
-  plot3
+  plot3,
+  summ,
+  report
 )
