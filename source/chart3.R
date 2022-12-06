@@ -27,6 +27,9 @@ plot1 <- function (df = filtered) {
          y = "County",
          title = "Total Crimes in Each County in Washington State for the Year 2019")
 }
+
 plot1()
+
+
 
 

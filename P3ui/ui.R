@@ -24,8 +24,9 @@ plot2 <- tabPanel("Plot 2",
                   titlePanel("Plot2"))
 
 plot3 <- tabPanel("Plot 3",
-                  titlePanel("Plot 3"))
-
+                  titlePanel("Plot 3"),
+                  plotOutput("plot2"))
+      
 ui <- navbarPage(
   "Washington Crime!",
   intro_page,
