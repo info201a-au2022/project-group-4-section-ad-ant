@@ -49,8 +49,13 @@ shinyServer(function(input, output) {
     plot_ly(data = plot_data, x = ~YEAR,
             y = ~PRISON_RATE, type = 'scatter', mode = 'lines', color = ~COUNTY) %>%
       layout(
-        yaxis = list(rangemode = "tozero"))
+        yaxis = list(rangemode = "tozero")) %>%
+      layout(
+        yaxis = list(title = list(text = 'Prison Rate'))) %>%
+      layout(
+        xaxis = list(title = list(text = 'Year')))
   
+      
   })
   
   output$chooseCounty <- renderUI({
@@ -91,10 +96,16 @@ shinyServer(function(input, output) {
   
   output$plot3 <- renderPlotly({
     wa_cities %>% 
-      filter(state %in% input$city_select) %>% 
-      plot_ly(x = ~state,
-              y = ~safetyScore,
-              type = 'bar')
+      summarize(
+        State = state,
+        SAFETY_SCORE = safetyScore
+      ) %>%
+      filter(State %in% input$city_select) %>% 
+      plot_ly(x = ~State,
+              y = ~SAFETY_SCORE,
+              type = 'bar') %>%
+      layout(yaxis = list(title = list(text = 'Safety Score')))
+      
   })
 
 })
