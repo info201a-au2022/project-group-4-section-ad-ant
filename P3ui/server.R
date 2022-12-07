@@ -71,6 +71,7 @@ shinyServer(function(input, output) {
         labs(x = "Number of Crimes",
              y = "County",
              title = "Total Crimes in Each County in Washington State for the Year 2019")
+  
   })
   
   output$rape <- renderPlotly({

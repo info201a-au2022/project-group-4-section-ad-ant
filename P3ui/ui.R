@@ -27,6 +27,7 @@ intro_page <- tabPanel("Introduction",
                          from the official government website. These offenses include of burglary, shootings, vandalism, assault, and more. 
                          The public is then given data on the safety score of the area they are in, the incarceration rate, and the most common 
                          types of crime so they may make an educated decision about avoiding particular places with poor safety scores."),
+                       img(src = "https://www.grothlaw.com/wp-content/uploads/2020/09/preview_COLOURBOX34624761.jpg", height = 500, width = 1100)
 )
                        #h1("Introduction"))
 
@@ -61,8 +62,13 @@ plot3 <- tabPanel("Safe Cities",
 
       
 summ <- tabPanel("Summary",
-                 titlePanel("Summary"))
-
+                 titlePanel("Summary Takeaways"),
+                 p("Our exploration of the Crime data shows us that Snoqualmie is by far the safest city in 
+                   Washington. On the other hand, Tacoma is considered as the most dangerous one. In terms of prison rate,
+                   the fluctuations are mostly not obvious. There are 3 stagnant prison rate which are Benton, Clark and Pierce. Las but not least,
+                   the most crimes committed in Washington is in Pierce"),
+                 img(src = "https://news.vanderbilt.edu/files/Crime-Scene-Resized.jpg", height = 500, width = 1100))
+                       
 report <- tabPanel("Report",
                    titlePanel("WAC Report"),
                    h3("Project Code"),
