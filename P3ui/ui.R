@@ -20,8 +20,14 @@ intro_page <- tabPanel("Introduction",
                        h1("Introduction"))
 
 plot1 <- tabPanel("Plot 1",
-                  titlePanel("Plot1"),
-                  plotOutput("plot1"))
+          titlePanel("Plot1"),
+          sidebarPanel(
+                uiOutput("chooseCounty"),
+                uiOutput("chooseYear")),
+          mainPanel(
+                  plotlyOutput("plot1"),
+                  plotlyOutput("densityplot"))
+                  )
 
 plot2 <- tabPanel("Plot 2",
                   titlePanel("Plot2"), 

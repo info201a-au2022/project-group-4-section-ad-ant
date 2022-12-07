@@ -18,10 +18,9 @@ county_crime <- read.csv("https://raw.githubusercontent.com/info201a-au2022/proj
 county_crime_filtered <- county_crime %>%
   filter(LOCATION == "COUNTY TOTAL") %>%
   group_by(COUNTY) %>%
-  summarize(COUNTY,
-            INDEXYEAR,
-            PRISON.TOTAL,
-            PRISON.RATE,
+  summarize("COUNTY" = COUNTY,
+            "YEAR" = INDEXYEAR,
+            "PRISON_RATE" = PRISON.RATE,
   )
 
 data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-ad-ant/main/data/county-crime-WA.csv")
@@ -43,20 +42,35 @@ lowest_crime <- filtered %>%
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
 
-  output$plot1 <- renderPlot({
-  ggplot(county_crime_filtered, 
-                         aes(x = INDEXYEAR, 
-                             y = PRISON.RATE, 
-                             fill = COUNTY)) +
-    geom_area() + 
-    facet_wrap(~COUNTY) +
-    labs(
-      x = "Year",
-      y = "Prison Rate",
-      title = "Prison Rate in Washington Counties from 2012-2020",
-    )
+  output$plot1 <- renderPlotly({
+    plot_data <- county_crime_filtered %>% 
+      filter(COUNTY %in% input$county_select) %>% 
+      filter(YEAR <= input$year_range[2] & YEAR >= input$year_range[1])
+      
+    plot_ly(data = plot_data, x = ~YEAR,
+            y = ~PRISON_RATE, type = 'scatter', mode = 'lines', color = ~COUNTY) %>%
+      layout(
+        yaxis = list(rangemode = "tozero"))
   
   })
+  
+  output$chooseCounty <- renderUI({
+    selectInput("county_select",
+                h3("select county"),
+                choices = unique(county_crime_filtered$COUNTY))
+    
+  })
+  
+  output$chooseYear <- renderUI({
+    sliderInput("year_range",
+                h3("select year"),
+                min = min(county_crime_filtered$YEAR, na.rm = TRUE),
+                max = max(county_crime_filtered$YEAR, na.rm = TRUE),
+                value = c(2012, 2020),
+                sep = "",
+                step = 1)
+  })
+
   
   output$plot2 <- renderPlot({
     ggplot(filtered, aes(x = TOTAL_CRIMES, y = reorder(County, -TOTAL_CRIMES))) +
