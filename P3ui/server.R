@@ -110,7 +110,10 @@ shinyServer(function(input, output) {
   
   output$plot4 <- renderPlotly({
     plot_ly(wa_cities, x= ~safetyScore, y= ~state, type = 'scatter', 
-            color = ~safetyScore, size = ~safetyScore)
+            color = ~safetyScore, size = ~safetyScore, width = 1400) %>% 
+      layout(yaxis = list(title = list(text = 'State'))) %>% 
+      layout(xaxis = list(title = list(text = 'Safety Score'))) %>% 
+      layout(legend = list(title = list(text = 'Safety Score')))
   })
 
 })
