@@ -11,6 +11,7 @@
 
 library(shiny)
 library(plotly)
+library(shinyWidgets)
 
 # Define UI for application that draws a histogram
 
@@ -124,5 +125,6 @@ ui <- navbarPage(
   plot2,
   plot3,
   summ,
-  report
+  report,
+  setBackgroundImage(src = "https://img.freepik.com/free-photo/vintage-wallpaper-background_53876-25250.jpg?auto=format&h=200")
 )
