@@ -3,7 +3,7 @@ library("tidyverse")
 library("dplyr")
 
 
-data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-ad-ant/main/data/FBI-2019-Crime-Statistics-WA.csv")
+data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-ad-ant/main/data/county-crime-WA.csv")
 filtered <- data %>%
   arrange(TOTAL_CRIMES) %>%
   summarize(County, TOTAL_CRIMES)
@@ -23,8 +23,8 @@ plot1 <- function (df = filtered) {
     xlab("Number of Committed Crimes") +
     theme_bw() +
     labs(x = "Number of Crimes",
-         y = "City",
-         title = "Total Crimes in Each City in Washington State for the Year 2019")
+         y = "County",
+         title = "Total Crimes in Each County in Washington State for the Year 2019")
 }
 
 plot1()

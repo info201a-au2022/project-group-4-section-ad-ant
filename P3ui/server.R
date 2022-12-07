@@ -23,8 +23,7 @@ county_crime_filtered <- county_crime %>%
             "PRISON_RATE" = PRISON.RATE,
   )
 
-data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-ad-ant/main/data/FBI-2019-Crime-Statistics-WA.csv")
-
+data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-ad-ant/main/data/county-crime-WA.csv")
 
 
 # Define server logic required to draw a histogram
@@ -70,12 +69,12 @@ shinyServer(function(input, output) {
         xlab("Number of Committed Crimes") +
         theme_bw() +
         labs(x = "Number of Crimes",
-             y = "City",
-             title = "Total Crimes in Each City in Washington State for the Year 2019")
+             y = "County",
+             title = "Total Crimes in Each County in Washington State for the Year 2019")
   })
   
   output$rape <- renderPlotly({
-    ggplot(data, aes(x = Rape, y = reorder(County, -Rape1))) +
+    ggplot(data, aes(x = Rape1, y = reorder(County, -Rape1))) +
       geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
       xlab("Number of Committed Rape") +
       theme_bw() +
@@ -88,7 +87,9 @@ shinyServer(function(input, output) {
   output$chooseCounty1 <- renderUI({
     selectInput("county_select1",
                 h3("Type of Crime"),
-                choices = list("total", "rape"))
+                choices = list("Total", "Violent Crimes", "Murder", "Rape", "Robbery", "Assault",
+                               "Property Crime", "Burglary", "Theft", "Motor Vehicle Theft",
+                               "Arson"))
   })
   
   output$chooseCity <- renderUI({
