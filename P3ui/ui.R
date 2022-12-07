@@ -12,6 +12,8 @@
 library(shiny)
 library(plotly)
 library(shinyWidgets)
+install.packages("shinythemes")
+library(shinythemes)
 
 # Define UI for application that draws a histogram
 
@@ -118,13 +120,13 @@ report <- tabPanel("Report",
                    
                    )
 
-ui <- navbarPage(
+ui <-navbarPage(
+  theme = shinytheme("slate"),
   "Washington Crime!",
   intro_page,
   plot1,
   plot2,
   plot3,
   summ,
-  report,
-  setBackgroundImage(src = "https://img.freepik.com/free-photo/vintage-wallpaper-background_53876-25250.jpg?auto=format&h=200")
+  report
 )
