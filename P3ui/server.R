@@ -80,9 +80,21 @@ shinyServer(function(input, output) {
              y = "County",
              title = "Total Crimes in Each County in Washington State for the Year 2019")
   })
+  
+  output$chooseCity <- renderUI({
+    selectInput("city_select",
+                h3("City"),
+                choices = unique(wa_cities$state), 
+                multiple = TRUE)
+    
+  })
+  
   output$plot3 <- renderPlotly({
-    plot_ly(data=wa_cities, x= ~safetyScore, y= ~state, type = 'scatter', 
-            color = ~safetyScore, size = ~safetyScore)
+    wa_cities %>% 
+      filter(state %in% input$city_select) %>% 
+      plot_ly(x = ~state,
+              y = ~safetyScore,
+              type = 'bar')
   })
 
 })

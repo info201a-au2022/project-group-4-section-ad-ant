@@ -42,9 +42,14 @@ plot2 <- tabPanel("Plot 2",
                   titlePanel("Plot2"), 
                   plotOutput("plot2"))
 
-plot3 <- tabPanel("Plot 3",
-                  titlePanel("Plot 3"),
-                  plotlyOutput("plot3"))
+plot3 <- tabPanel("Safe Cities",
+                  titlePanel("Safety Level of Cities across Washington State"),
+                  sidebarPanel(
+                    uiOutput("chooseCity")),
+                  mainPanel(
+                    plotlyOutput("plot3")
+                  ))
+
       
 summ <- tabPanel("Summary",
                  titlePanel("Summary"))
