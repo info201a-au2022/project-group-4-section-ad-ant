@@ -46,7 +46,6 @@ shinyServer(function(input, output) {
     plot_data <- county_crime_filtered %>% 
       filter(COUNTY %in% input$county_select) %>% 
       filter(YEAR <= input$year_range[2] & YEAR >= input$year_range[1])
-      
     plot_ly(data = plot_data, x = ~YEAR,
             y = ~PRISON_RATE, type = 'scatter', mode = 'lines', color = ~COUNTY) %>%
       layout(
@@ -56,14 +55,14 @@ shinyServer(function(input, output) {
   
   output$chooseCounty <- renderUI({
     selectInput("county_select",
-                h3("select county"),
+                h3("County"),
                 choices = unique(county_crime_filtered$COUNTY))
     
   })
   
   output$chooseYear <- renderUI({
     sliderInput("year_range",
-                h3("select year"),
+                h3("Year"),
                 min = min(county_crime_filtered$YEAR, na.rm = TRUE),
                 max = max(county_crime_filtered$YEAR, na.rm = TRUE),
                 value = c(2012, 2020),
