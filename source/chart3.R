@@ -3,8 +3,7 @@ library("tidyverse")
 library("dplyr")
 
 
-data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-ad-ant/main/data/county-crime-WA.csv")
-
+data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-ad-ant/main/data/FBI-2019-Crime-Statistics-WA.csv")
 filtered <- data %>%
   arrange(TOTAL_CRIMES) %>%
   summarize(County, TOTAL_CRIMES)
@@ -19,13 +18,13 @@ lowest_crime <- filtered %>%
 
 # PLOT
 plot1 <- function (df = filtered) {
-  ggplot(filtered, aes(x = TOTAL_CRIMES, y = reorder(County, -TOTAL_CRIMES))) +
+  ggplot(data, aes(x = TOTAL_CRIMES, y = reorder(County, -TOTAL_CRIMES))) +
     geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
     xlab("Number of Committed Crimes") +
     theme_bw() +
     labs(x = "Number of Crimes",
-         y = "County",
-         title = "Total Crimes in Each County in Washington State for the Year 2019")
+         y = "City",
+         title = "Total Crimes in Each City in Washington State for the Year 2019")
 }
 
 plot1()

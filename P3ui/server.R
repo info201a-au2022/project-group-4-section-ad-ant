@@ -23,19 +23,7 @@ county_crime_filtered <- county_crime %>%
             "PRISON_RATE" = PRISON.RATE,
   )
 
-data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-ad-ant/main/data/county-crime-WA.csv")
-
-filtered <- data %>%
-  arrange(TOTAL_CRIMES) %>%
-  summarize(County, TOTAL_CRIMES)
-
-highest_crime <- filtered %>%
-  filter(TOTAL_CRIMES == max(TOTAL_CRIMES)) %>%
-  pull(County)
-
-lowest_crime <- filtered %>%
-  filter(TOTAL_CRIMES == min(TOTAL_CRIMES)) %>%
-  pull(County)
+data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-ad-ant/main/data/FBI-2019-Crime-Statistics-WA.csv")
 
 
 
@@ -76,31 +64,31 @@ shinyServer(function(input, output) {
   })
 
   
-  output$crimestotal <- renderPlot({
-    ggplot(filtered, aes(x = TOTAL_CRIMES, y = reorder(County, -TOTAL_CRIMES))) +
+  output$crimestotal <- renderPlotly({
+    ggplot(data, aes(x = TOTAL_CRIMES, y = reorder(County, -TOTAL_CRIMES))) +
         geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
         xlab("Number of Committed Crimes") +
         theme_bw() +
         labs(x = "Number of Crimes",
-             y = "County",
-             title = "Total Crimes in Each County in Washington State for the Year 2019")
+             y = "City",
+             title = "Total Crimes in Each City in Washington State for the Year 2019")
   })
   
-  output$rape <- renderPlot({
-    ggplot(data, aes(x = Rape1, y = reorder(County, -Rape1))) +
+  output$rape <- renderPlotly({
+    ggplot(data, aes(x = Rape, y = reorder(County, -Rape1))) +
       geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
       xlab("Number of Committed Rape") +
       theme_bw() +
       labs(x = "Number of Rape",
-           y = "County",
-           title = "Committed Rape Crimes in Washington State for the Year 2019")
+           y = "Cities",
+           title = "Committed Rape Crimes in Cities in Washington State for the Year 2019")
   })
   
   
   output$chooseCounty1 <- renderUI({
     selectInput("county_select1",
                 h3("Type of Crime"),
-                choices = c("total", "rape"))
+                choices = list("total", "rape"))
   })
   
   output$chooseCity <- renderUI({

@@ -12,7 +12,6 @@
 library(shiny)
 library(plotly)
 library(shinyWidgets)
-install.packages("shinythemes")
 library(shinythemes)
 
 # Define UI for application that draws a histogram
