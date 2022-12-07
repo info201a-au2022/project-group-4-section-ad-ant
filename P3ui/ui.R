@@ -41,9 +41,13 @@ plot1 <- tabPanel("Prison Rate",
                   )
                 )
 
-plot2 <- tabPanel("Plot 2",
-                  titlePanel("Plot2"), 
-                  plotOutput("plot2"))
+plot2 <- tabPanel("Crimes",
+                  titlePanel("Crimes in WA"), 
+                  sidebarPanel(
+                    uiOutput("chooseCounty1")),
+                  mainPanel(
+                    plotlyOutput("crimestotal"))
+                  )
 
 plot3 <- tabPanel("Safe Cities",
                   titlePanel("Safety Level of Cities across Washington State"),

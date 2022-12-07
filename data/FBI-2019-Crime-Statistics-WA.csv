@@ -1,12 +1,4 @@
-City,Population,"Violent
- crime","Murder and
- nonnegligent
- manslaughter",Rape1,Robbery,"Aggravated
- assault","Property
- crime",Burglary,"Larceny-
- theft","Motor
- vehicle
- theft",Arson,TOTAL_CRIMES
+City,Population,Violence,Murder,Rape,Robbery,Aggravated_Assault,Property_crime,Burglary,Larceny,Motor_vehicle_theft,Arson,TOTAL_CRIMES
 Aberdeen,"16,627",71,1,25,14,31,680,123,519,38,6,"18,135"
 Airway Heights,"9,545",27,0,8,5,14,408,58,304,46,2,"10,417"
 Algona,"3,247",6,0,2,2,2,52,8,39,5,1,"3,364"

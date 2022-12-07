@@ -76,7 +76,7 @@ shinyServer(function(input, output) {
   })
 
   
-  output$plot2 <- renderPlot({
+  output$crimestotal <- renderPlot({
     ggplot(filtered, aes(x = TOTAL_CRIMES, y = reorder(County, -TOTAL_CRIMES))) +
         geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
         xlab("Number of Committed Crimes") +
@@ -84,6 +84,23 @@ shinyServer(function(input, output) {
         labs(x = "Number of Crimes",
              y = "County",
              title = "Total Crimes in Each County in Washington State for the Year 2019")
+  })
+  
+  output$rape <- renderPlot({
+    ggplot(data, aes(x = Rape1, y = reorder(County, -Rape1))) +
+      geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
+      xlab("Number of Committed Rape") +
+      theme_bw() +
+      labs(x = "Number of Rape",
+           y = "County",
+           title = "Committed Rape Crimes in Washington State for the Year 2019")
+  })
+  
+  
+  output$chooseCounty1 <- renderUI({
+    selectInput("county_select1",
+                h3("Type of Crime"),
+                choices = c("total", "rape"))
   })
   
   output$chooseCity <- renderUI({
