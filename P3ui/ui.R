@@ -47,8 +47,11 @@ plot3 <- tabPanel("Safe Cities",
                   sidebarPanel(
                     uiOutput("chooseCity")),
                   mainPanel(
-                    plotlyOutput("plot3")
-                  ))
+                    plotlyOutput("plot3")),
+                  titlePanel("Safest Cities in Washington"),
+                  mainPanel(
+                    plotlyOutput("plot4"))
+                  )
 
       
 summ <- tabPanel("Summary",
