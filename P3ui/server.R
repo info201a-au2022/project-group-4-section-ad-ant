@@ -70,20 +70,99 @@ shinyServer(function(input, output) {
         theme_bw() +
         labs(x = "Number of Crimes",
              y = "County",
-             title = "Total Crimes in Each County in Washington State for the Year 2019")
+             title = "Total Crimes in Washington State for the Year 2019")
   
   })
   
   output$rape <- renderPlotly({
-    ggplot(data, aes(x = Rape1, y = reorder(County, -Rape1))) +
+    ggplot(data, aes(x = Rape, y = reorder(County, -Rape))) +
       geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
-      xlab("Number of Committed Rape") +
       theme_bw() +
       labs(x = "Number of Rape",
-           y = "Cities",
-           title = "Committed Rape Crimes in Cities in Washington State for the Year 2019")
+           y = "Counties",
+           title = "Committed Rape Crimes in Washington State for the Year 2019")
   })
   
+  output$violent <- renderPlotly({
+    ggplot(data, aes(x = Violent_crime, y = reorder(County, -Violent_crime))) +
+      geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
+      theme_bw() +
+      labs(x = "Number of Violent Crimes",
+           y = "Counties",
+           title = "Committed Violent Crimes in Washington State for the Year 2019")
+  })
+  
+  output$robbery <- renderPlotly({
+    ggplot(data, aes(x = Robbery, y = reorder(County, -Robbery))) +
+      geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
+      theme_bw() +
+      labs(x = "Number of Robberies",
+           y = "Counties",
+           title = "Committed Robberies in Washington State for the Year 2019")
+  })
+  
+  output$murder <- renderPlotly({
+    ggplot(data, aes(x = Murder, y = reorder(County, -Murder))) +
+      geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
+      theme_bw() +
+      labs(x = "Number of Murders",
+           y = "Counties",
+           title = "Committed Murders in Washington State for the Year 2019")
+  })
+  
+  output$assault <- renderPlotly({
+    ggplot(data, aes(x = Aggravated_assault, y = reorder(County, -Aggravated_assault))) +
+      geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
+      theme_bw() +
+      labs(x = "Number of Aggravated Assault",
+           y = "Counties",
+           title = "Committed Aggravated Assaults in Washington State for the Year 2019")
+  })
+  
+  output$prop <- renderPlotly({
+    ggplot(data, aes(x = Property_crime, y = reorder(County, -Property_crime))) +
+      geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
+      theme_bw() +
+      labs(x = "Number of Property Crimes",
+           y = "Counties",
+           title = "Committed Property Crimes in Washington State for the Year 2019")
+  })
+  
+  output$burglary <- renderPlotly({
+    ggplot(data, aes(x = Burglary, y = reorder(County, -Burglary))) +
+      geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
+      theme_bw() +
+      labs(x = "Number of Burglaries",
+           y = "Counties",
+           title = "Committed Burglaries in Washington State for the Year 2019")
+  })
+  
+  output$larceny <- renderPlotly({
+    ggplot(data, aes(x = Larceny, y = reorder(County, -Larceny))) +
+      geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
+      theme_bw() +
+      labs(x = "Number of Larceny",
+           y = "Counties",
+           title = "Committed Larcernies in Washington State for the Year 2019")
+  })
+  
+  output$motor <- renderPlotly({
+    ggplot(data, aes(x = Motor_vehicle_theft, y = reorder(County, -Motor_vehicle_theft))) +
+      geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
+      theme_bw() +
+      labs(x = "Number of Motor Vehicle Theft",
+           y = "Counties",
+           title = "Committed Motor Vehicle Theft in Washington State for the Year 2019")
+  })
+  
+  output$arson <- renderPlotly({
+    ggplot(data, aes(x = Arson, y = reorder(County, -Arson))) +
+      geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.6) +
+      theme_bw() +
+      labs(x = "Number of Arson",
+           y = "Counties",
+           title = "Committed Arsons in Washington State for the Year 2019")
+  })
   
   output$chooseCounty1 <- renderUI({
     selectInput("county_select1",

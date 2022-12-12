@@ -46,7 +46,27 @@ plot2 <- tabPanel("Crimes",
                   sidebarPanel(
                     uiOutput("chooseCounty1")),
                   mainPanel(
-                    plotlyOutput("crimestotal"))
+                    plotlyOutput("crimestotal")),
+                  mainPanel(
+                    plotlyOutput("rape")),
+                  mainPanel(
+                    plotlyOutput("violent")),
+                  mainPanel(
+                    plotlyOutput("robbery")),
+                  mainPanel(
+                    plotlyOutput("murder")),
+                  mainPanel(
+                    plotlyOutput("assault")),
+                  mainPanel(
+                    plotlyOutput("prop")),
+                  mainPanel(
+                    plotlyOutput("burglary")),
+                  mainPanel(
+                    plotlyOutput("larceny")),
+                  mainPanel(
+                    plotlyOutput("motor")),
+                  mainPanel(
+                    plotlyOutput("arson"))
                   )
 
 plot3 <- tabPanel("Safe Cities",
