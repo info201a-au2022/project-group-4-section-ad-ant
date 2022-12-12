@@ -1,12 +1,4 @@
-County,"Violent
-crime","Murder and
-nonnegligent
-manslaughter",Rape1,Robbery,"Aggravated
-assault","Property
-crime",Burglary,"Larceny-
-theft","Motor
-vehicle
-theft",Arson,TOTAL_CRIMES
+County,Violent_crime,Murder,Rape,Robbery,Aggravated_assault,Property_crime,Burglary,Larceny,Motor_vehicle_theft,Arson,TOTAL_CRIMES
 Asotin,15,1,4,0,10,126,28,91,7,0,282
 Benton,73,2,6,5,60,386,81,259,46,5,923
 Chelan,43,0,3,0,40,322,90,219,13,0,730
