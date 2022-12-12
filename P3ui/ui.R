@@ -45,6 +45,9 @@ plot2 <- tabPanel("Crimes",
                   titlePanel("Crimes in WA"), 
                   sidebarPanel(
                     uiOutput("chooseCounty1")),
+                  p(strong("We believe that this data visualization is important because it raises people's awareness
+                    on the common crimes that occur in each county so that they would be more cautious on what
+                    dangers or which crime they need to be alerted on wherever they go.")),
                   mainPanel(
                     plotlyOutput("crimestotal")),
                   mainPanel(
