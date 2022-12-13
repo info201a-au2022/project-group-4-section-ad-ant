@@ -68,7 +68,7 @@ intro_page <- tabPanel("Introduction",
                       
 
 )
-                       #h1("Introduction"))
+                       
 
 plot1 <- tabPanel("Prison Rate",
           titlePanel("Prison Rate across Washington Counties"),
@@ -93,33 +93,22 @@ plot1 <- tabPanel("Prison Rate",
 plot2 <- tabPanel("Crimes",
                   titlePanel("Crimes in WA"), 
                   sidebarPanel(
-                    uiOutput("chooseCounty1")),
-                  p(strong("We believe that this data visualization is important because it raises people's awareness
+                    uiOutput("chooseCounty1"),
+                    uiOutput("choosecrime")),
+                  mainPanel(
+                    plotOutput("crimestotal"),
+                    p(""),
+                    p(strong("The chart uses data from the FBI: UCR website which was titled “Offenses Known to Law Enforcement” 
+                    for Washington for the year 2019. The data displayed the counties along with the type of reported crimes 
+                    ranging from violent crimes to arson. The number displayed on the x-axis represents the total crimes committed
+                    in a county, with the y-axis being the county. We can see that the Ferry County has the lowest criminal activity
+                    and the Pierce County having the highest criminal activity. The importance of this chart is to visualize how safe
+                    a county is in comparison to the other counties. This promotes awareness to the local community and help them understand the
+                    safety of different areas in their vicinity. We believe that this data visualization is important because it raises people's awareness
                     on the common crimes that occur in each county so that they would be more cautious on what
-                    dangers or which crime they need to be alerted on wherever they go.")),
-                  mainPanel(
-                    plotlyOutput("crimestotal")),
-                  mainPanel(
-                    plotlyOutput("rape")),
-                  mainPanel(
-                    plotlyOutput("violent")),
-                  mainPanel(
-                    plotlyOutput("robbery")),
-                  mainPanel(
-                    plotlyOutput("murder")),
-                  mainPanel(
-                    plotlyOutput("assault")),
-                  mainPanel(
-                    plotlyOutput("prop")),
-                  mainPanel(
-                    plotlyOutput("burglary")),
-                  mainPanel(
-                    plotlyOutput("larceny")),
-                  mainPanel(
-                    plotlyOutput("motor")),
-                  mainPanel(
-                    plotlyOutput("arson"))
-                  )
+                    dangers or which crime they need to be alerted on wherever they go."))
+                  ))
+
 
 plot3 <- tabPanel("Safe Cities",
                   titlePanel("Safety Level of Cities across Washington State"),
