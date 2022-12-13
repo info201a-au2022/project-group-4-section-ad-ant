@@ -120,12 +120,12 @@ plot3 <- tabPanel("Safe Cities",
                     uiOutput("chooseCity")),
                   mainPanel(
                     plotlyOutput("plot3")),
+                  p(strong("The chart above uses FBI Crime statistics from 2019 to assess which cities are the safest for students at the University of Washington. The purpose of this visualization is to aid students and Washington residents in being cognizant of the city that they are occupying at any time and the level of safety/violence relative in that city. This chart allows users to input cities with a population over 10,000 and compare/contrast the level of safety they have relative to one another.")),
                   titlePanel("Safe Cities in Washington"),
                   mainPanel(
-                    p("This chart uses the same FBI statistics as the first one. Simply put, this visualization allows the user to see where how many cities are actually safe. The line at index zero serves as a baseline threshold or “neutral” meaning that cities across that line are technically safe and cities behind that line (any negative safety scores) are not safe. For example, Snoqualmie has a safety score of 0.59 making it overwhelmingly the safest city in Washington. Conversely, Tacoma has a safety score of -1.44 making it the most dangerous city in Washington. This informs UW students that they should be more cautious and wary in cities with negative safety scores like Tacoma.
-"),
-                    plotlyOutput("plot4"))
-                  )
+                    plotlyOutput("plot4"),
+                    p(strong("This chart uses the same FBI statistics as the first one. Simply put, this visualization allows the user to see where how many cities are actually safe. The line at index zero serves as a baseline threshold or “neutral” meaning that cities across that line are technically safe and cities behind that line (any negative safety scores) are not safe. For example, Snoqualmie has a safety score of 0.59 making it overwhelmingly the safest city in Washington. Conversely, Tacoma has a safety score of -1.44 making it the most dangerous city in Washington. This informs UW students that they should be more cautious and wary in cities with negative safety scores like Tacoma.")),
+                  ))
 
       
 summ <- tabPanel("Summary",
